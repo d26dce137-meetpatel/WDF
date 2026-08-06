@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<div class="logo">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png">
+<span>Student Hub</span>
+</div>
+
+<div class="menu">
+<a href="dashboard.html">Dashboard</a>
+<a href="courses.html">Courses</a>
+<a href="assignment.html">Assignments</a>
+<a href="attendance.html">Attendance</a>
+<a href="result.html">Results</a>
+<a href="timetable.html">Timetable</a>
+<a href="studymaterial.html">Study Material</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</div>
+
+<div class="title">
+<h2>Student Dashboard</h2>
+</div>
+
+<div class="main">
+
+<div class="profile">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+<h3 id="studentName">Student Name</h3>
+
+<div class="info">
+
+<p><b>Enrollment No.</b><br><span id="enrollment"></span></p>
+
+<p><b>Email</b><br><span id="email"></span></p>
+
+<p><b>Mobile</b><br><span id="mobile"></span></p>
+
+<p><b>Department</b><br>Computer Engineering</p>
+
+<p><b>Semester</b><br>5th Semester</p>
+
+</div>
+
+<button class="logout" onclick="logout()">Logout</button>
+
+</div>
+
+<div class="content">
+
+<div class="card">
+
+<h3>Latest Updates</h3>
+
+<ul>
+<li>📢 Assignment Submission Last Date : 30 July</li>
+<li>📢 Mid Semester Examination : 10 August</li>
+<li>📢 Attendance Updated Successfully</li>
+<li>📢 New Study Material Uploaded</li>
+<li>📢 Internal Marks Available</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Welcome</h3>
+
+<p>
+Welcome to Student Hub Dashboard.
+You can manage Attendance,
+Courses, Results,
+Assignments and Study Material
+from this portal.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Student Hub | All Rights Reserved
+</div>
+
+<script>
+
+let isLoggedIn = localStorage.getItem("isLoggedIn");
+
+if (isLoggedIn !== "true") {
+alert("Please Login First!");
+window.location.href = "login.html";
+}
+
+let student = JSON.parse(localStorage.getItem("student"));
+
+if (student != null) {
+document.getElementById("studentName").innerHTML = student.name;
+document.getElementById("enrollment").innerHTML = student.enrollment;
+document.getElementById("email").innerHTML = student.email;
+document.getElementById("mobile").innerHTML = student.mobile;
+} else {
+alert("No Student Data Found!");
+window.location.href = "create_account.html";
+}
+
+function logout() {
+
+let ans = confirm("Are you sure you want to Logout?");
+
+if (ans) {
+localStorage.removeItem("isLoggedIn");
+window.location.href = "login.html";
+}
+
+}
+
+</script>
+
+</body>
+</html>
