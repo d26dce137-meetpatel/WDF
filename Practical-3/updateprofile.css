@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f8f7;
+    color: #333;
+}
+
+header {
+    background: #173f5f;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+header h1 {
+    margin: 0 0 18px;
+    font-size: 32px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background: #2a9d8f;
+}
+
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.profile-title {
+    background: #2a9d8f;
+    color: white;
+    text-align: center;
+    padding: 30px 25px;
+    border-radius: 18px;
+}
+
+.profile-title h2 {
+    font-size: 30px;
+    margin: 0 0 10px;
+}
+
+.profile-title p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.profile-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border-top: 5px solid #173f5f;
+    box-shadow: 0 5px 15px #d9e5e2;
+    margin-top: 25px;
+}
+
+.profile-box h3 {
+    color: #173f5f;
+    font-size: 21px;
+    margin: 0 0 15px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #173f5f;
+}
+
+input {
+    width: 100%;
+    padding: 9px;
+    border: 2px solid #c9ddda;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2a9d8f;
+}
+
+button {
+    margin-top: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #173f5f;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+button:hover {
+    background: #2a9d8f;
+}
+
+button[type="reset"] {
+    background: #2a9d8f;
+}
+
+button[type="reset"]:hover {
+    background: #173f5f;
+}
+
+footer {
+    background: #173f5f;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
