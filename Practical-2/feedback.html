@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Feedback</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Student Portal</h1>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="updateprofile.html">Update Profile</a>
+        <a href="about.html">About Us</a>
+        <a href="createaccount.html">Create Account</a>
+        <a href="forgotpassword.html">Forgot Password</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="events.html">Events</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<main>
+
+    <h2>Student Feedback Form</h2>
+
+    <p>We value your feedback. Please share your experience with us.</p>
+
+    <h3>Feedback Details</h3>
+
+    <form>
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+        <label for="enrollment">Enrollment No:</label><br>
+        <input type="text" id="enrollment" name="enrollment" placeholder="Enter enrollment number" required><br><br>
+
+        <label for="subject">Subject:</label><br>
+        <select id="subject" name="subject" required>
+            <option value="">Select Subject</option>
+            <option>Web Development</option>
+            <option>Computer Networking</option>
+            <option>Advanced OOP</option>
+            <option>Machine Learning</option>
+            <option>NoSQL</option>
+            <option>Cloud Computing</option>
+            <option>Data Structure</option>
+            <option>Database Management System</option>
+            <option>Operating System</option>
+            <option>Software Engineering</option>
+            <option>Python Programming</option>
+            <option>Java Programming</option>
+            <option>Artificial Intelligence</option>
+            <option>Cyber Security</option>
+        </select><br><br>
+
+        <label for="semester">Semester:</label><br>
+        <select id="semester" name="semester" required>
+            <option value="">Select Semester</option>
+            <option>Semester 1</option>
+            <option>Semester 2</option>
+            <option>Semester 3</option>
+            <option>Semester 4</option>
+            <option>Semester 5</option>
+            <option>Semester 6</option>
+            <option>Semester 7</option>
+            <option>Semester 8</option>
+        </select><br><br>
+
+        <label for="faculty">Faculty:</label><br>
+        <select id="faculty" name="faculty" required>
+            <option value="">Select Faculty</option>
+            <option>Dr. Rahul Patel</option>
+            <option>Prof. Amit Shah</option>
+            <option>Prof. Neha Desai</option>
+            <option>Prof. Rakesh Mehta</option>
+            <option>Prof. Priya Joshi</option>
+            <option>Prof. Kunal Parikh</option>
+            <option>Prof. Sneha Patel</option>
+            <option>Prof. Raj Sharma</option>
+        </select><br><br>
+
+        <label for="rating">Rating:</label><br>
+        <select id="rating" name="rating" required>
+            <option value="">Select Rating</option>
+            <option>5 - Excellent</option>
+            <option>4 - Very Good</option>
+            <option>3 - Good</option>
+            <option>2 - Average</option>
+            <option>1 - Poor</option>
+        </select><br><br>
+
+        <label for="feedback">Your Feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="5" cols="40" placeholder="Write your feedback here..." required></textarea><br><br>
+
+        <button type="submit">Submit Feedback</button>
+        <button type="reset">Clear</button>
+
+    </form>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
