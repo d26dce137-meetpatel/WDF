@@ -1,6 +1,6 @@
 # 🎓 StudentHub Portal
 
-> A simple and user-friendly Student Portal developed as a semester-long Web Development project.
+A simple and user-friendly Student Portal developed as a semester-long Web Development project.
 
 ---
 
