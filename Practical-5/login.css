@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f8f7;
+    color: #333;
+}
+
+header {
+    background: #173f5f;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+header h1 {
+    margin: 0 0 18px;
+    font-size: 32px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background: #2a9d8f;
+}
+
+main {
+    width: 90%;
+    max-width: 600px;
+    margin: 35px auto;
+}
+
+.login-title {
+    background: #2a9d8f;
+    color: white;
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 20px;
+}
+
+.login-title h2 {
+    font-size: 34px;
+    margin: 0 0 12px;
+}
+
+.login-title p {
+    font-size: 17px;
+    margin: 0;
+}
+
+.login-box {
+    background: white;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border-top: 5px solid #173f5f;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #173f5f;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 11px;
+    border: 2px solid #c9ddda;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2a9d8f;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.remember input {
+    width: 17px;
+    height: 17px;
+}
+
+.remember label {
+    margin: 0;
+    font-weight: normal;
+}
+
+button {
+    margin-top: 20px;
+    padding: 11px 22px;
+    border: none;
+    border-radius: 20px;
+    background: #173f5f;
+    color: white;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+button[type="reset"] {
+    background: #2a9d8f;
+}
+
+.login-box p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-box a {
+    color: #2a9d8f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background: #173f5f;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 45px;
+}
+
+footer p {
+    margin: 0;
+}
