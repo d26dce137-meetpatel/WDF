@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="dark-theme.css">
+</head>
+
+<body>
+<aside id="promoBanner" style="display: flex; justify-content: space-between; align-items: center; background: #e63946; color: white; padding: 10px 24px; font-size: 14px; font-weight: bold; box-shadow: 0 2px 8px rgba(230, 57, 70, 0.3); position: sticky; top: 0; z-index: 1000;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="background: white; color: #e63946; font-size: 11px; padding: 2px 8px; border-radius: 12px; text-transform: uppercase; font-weight: 800;">New</span>
+        <span>🚀 Student Portal 2.0 is live! Explore our new interactive dashboard and features.</span>
+    </div>
+    <button type="button" id="closeBannerBtn" style="background: transparent; border: none; color: white; font-size: 22px; cursor: pointer; line-height: 1; padding: 0 5px;" aria-label="Close Notice">&times;</button>
+</aside>
+
+<header>
+    <div class="header-top">
+        <h1>Student Portal</h1>
+        
+        <div class="header-controls">
+            <!-- Hamburger Menu Button -->
+            <button type="button" id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Dark Mode Button -->
+            <button type="button" id="themeToggleBtn" class="theme-btn">🌙 Dark Mode</button>
+        </div>
+    </div>
+
+    <nav id="navMenu">
+        <a href="home.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="updateprofile.html">Update Profile</a>
+        <a href="about.html">About Us</a>
+        <a href="createaccount.html">Create Account</a>
+        <a href="forgotpassword.html">Forgot Password</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="events.html">Events</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="welcome">
+        <h2>Welcome to Student Portal</h2>
+
+        <p>
+            Welcome to our Student Portal. This platform helps students
+            manage their academic information and stay connected with
+            college activities.
+        </p>
+
+        <div style="margin-top: 25px;">
+            <a href="login.html" class="btn">Login Now</a>
+            <a href="createaccount.html" class="btn">Create Account</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Our Features</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Dashboard</h3>
+                <p>View your academic information and important updates.</p>
+            </div>
+
+            <div class="card">
+                <h3>Profile</h3>
+                <p>Update your personal information whenever required.</p>
+            </div>
+
+            <div class="card">
+                <h3>Events</h3>
+                <p>Stay updated with college events and activities.</p>
+            </div>
+
+            <div class="card">
+                <h3>Feedback</h3>
+                <p>Share your valuable feedback with us.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section" style="max-width: 800px; margin: 40px auto;">
+        <h2 style="text-align: center; color: #2a9d8f; margin-bottom: 25px;">Frequently Asked Questions</h2>
+        
+        <div class="accordion-item">
+            <button type="button" class="accordion-header">
+                <span>How do I retrieve a forgotten password?</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <p>Go to the <strong>Forgot Password</strong> page from the menu, enter your registered email, and verify your account to reset your password.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button type="button" class="accordion-header">
+                <span>How do I submit semester feedback for faculty?</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <p>Navigate to the <strong>Feedback</strong> page, select your course, semester, and faculty member, then enter your ratings.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button type="button" class="accordion-header">
+                <span>Where can I see upcoming events?</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <p>Click on the <strong>Events</strong> link in the navigation menu to see workshops, sports days, and cultural activity dates.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
