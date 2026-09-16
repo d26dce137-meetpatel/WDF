@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="dark-theme.css">
+</head>
+
+<body>
+<header>
+    <div class="header-top">
+        <h1>Student Portal</h1>
+        
+        <div class="header-controls">
+
+            <button type="button" id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <button type="button" id="themeToggleBtn" class="theme-btn">🌙 Dark Mode</button>
+        </div>
+    </div>
+
+    <nav id="navMenu">
+        <a href="home.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="updateprofile.html">Update Profile</a>
+        <a href="about.html">About Us</a>
+        <a href="createaccount.html">Create Account</a>
+        <a href="forgotpassword.html">Forgot Password</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="events.html">Events</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<main>
+    <div class="login-title">
+        <h2>Student Login</h2>
+        <p>Login to access your Student Portal account.</p>
+    </div>
+
+    <div class="login-box">
+
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <div class="remember" style="margin-bottom: 15px;">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember Me</label>
+            </div>
+
+            <button type="submit" class="btn-action">Login</button>
+            <button type="reset" class="btn-reset">Clear</button>
+        </form>
+
+        <p style="margin-top: 15px;">
+            <a href="forgotpassword.html">Forgot Password?</a>
+        </p>
+
+        <p>
+            Don't have an account?
+            <a href="createaccount.html">Create Account</a>
+        </p>
+    </div>
+
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-box">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="margin: 0; color: #2a9d8f;">Login Successful</h3>
+                <button type="button" id="closeLoginModalBtn" class="modal-close-btn">&times;</button>
+            </div>
+            
+            <p id="modalLoginDetails" style="margin: 15px 0; line-height: 1.6;">
+
+            </p>
+
+            <button type="button" id="confirmLoginModalBtn" style="background: #2a9d8f; color: white; border: none; padding: 10px 22px; border-radius: 20px; cursor: pointer; font-weight: bold;">Proceed to Dashboard</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
