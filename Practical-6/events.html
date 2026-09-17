@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Events</title>
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="dark-theme.css">
+</head>
+<body>
+<header>
+    <div class="header-top">
+        <h1>Student Portal</h1>
+        <div class="header-controls">
+            <button type="button" id="themeToggleBtn" class="theme-btn">🌙 Dark Mode</button>
+            <button type="button" id="hamburgerBtn" class="hamburger-btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </div>
+    <nav id="navMenu">
+        <a href="home.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="updateprofile.html">Update Profile</a>
+        <a href="about.html">About Us</a>
+        <a href="createaccount.html">Create Account</a>
+        <a href="forgotpassword.html">Forgot Password</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="events.html">Events</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<main>
+    <section class="events-title">
+        <h2>Upcoming Events</h2>
+        <p>Stay updated with the latest college events and activities.</p>
+    </section>
+
+    <section class="events-box">
+        <input type="text" id="searchInput" placeholder="Search event...">
+
+        <select id="categoryFilter">
+            <option value="All">All Categories</option>
+            <option value="Technical">Technical</option>
+            <option value="Sports">Sports</option>
+            <option value="Cultural">Cultural</option>
+        </select>
+
+        <select id="sortSelect">
+            <option value="default">Sort By</option>
+            <option value="nameAsc">Name A-Z</option>
+            <option value="nameDesc">Name Z-A</option>
+            <option value="dateAsc">Date Oldest-Newest</option>
+            <option value="dateDesc">Date Newest-Oldest</option>
+        </select>
+
+        <p id="loading">Loading events...</p>
+        <p id="error"></p>
+
+        <table>
+            <tr>
+                <th>Event Name</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Venue</th>
+            </tr>
+            <tbody id="eventTable"></tbody>
+        </table>
+
+        <div id="pagination"></div>
+    </section>
+
+    <section class="guidelines">
+        <h3>Event Guidelines</h3>
+        <ul>
+            <li>Students must carry their college ID card.</li>
+            <li>Students should report before the event starts.</li>
+            <li>Follow all college rules and regulations.</li>
+            <li>Maintain discipline during the event.</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+</footer>
+
+<script src="main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let events = [];
+    let filteredEvents = [];
+    let currentPage = 1;
+    const eventsPerPage = 3;
+
+    const eventTable = document.getElementById("eventTable");
+    const searchInput = document.getElementById("searchInput");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const sortSelect = document.getElementById("sortSelect");
+    const pagination = document.getElementById("pagination");
+    const loading = document.getElementById("loading");
+    const error = document.getElementById("error");
+
+    fetch("events.json")
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error("Unable to load event.json");
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            events = data;
+            filteredEvents = [...data];
+            loading.style.display = "none";
+            displayEvents();
+        })
+        .catch(function(err) {
+            loading.style.display = "none";
+            error.textContent = "Error loading events: " + err.message;
+        });
+
+    function displayEvents() {
+        eventTable.innerHTML = "";
+
+        const start = (currentPage - 1) * eventsPerPage;
+        const end = start + eventsPerPage;
+        const pageEvents = filteredEvents.slice(start, end);
+
+        if (pageEvents.length === 0) {
+            eventTable.innerHTML = "<tr><td colspan='5'>No events found.</td></tr>";
+            pagination.innerHTML = "";
+            return;
+        }
+
+        pageEvents.forEach(function(event) {
+            const row = document.createElement("tr");
+
+            row.innerHTML =
+                "<td>" + event.name + "</td>" +
+                "<td>" + event.category + "</td>" +
+                "<td>" + event.date + "</td>" +
+                "<td>" + event.time + "</td>" +
+                "<td>" + event.venue + "</td>";
+
+            eventTable.appendChild(row);
+        });
+
+        createPagination();
+    }
+
+    function applyFilters() {
+        const searchText = searchInput.value.toLowerCase().trim();
+        const category = categoryFilter.value;
+
+        filteredEvents = events.filter(function(event) {
+            const searchMatch =
+                event.name.toLowerCase().includes(searchText) ||
+                event.venue.toLowerCase().includes(searchText);
+
+            const categoryMatch =
+                category === "All" || event.category === category;
+
+            return searchMatch && categoryMatch;
+        });
+
+        applySorting();
+        currentPage = 1;
+        displayEvents();
+    }
+
+    function applySorting() {
+        const value = sortSelect.value;
+
+        if (value === "nameAsc") {
+            filteredEvents.sort(function(a, b) {
+                return a.name.localeCompare(b.name);
+            });
+        }
+
+        if (value === "nameDesc") {
+            filteredEvents.sort(function(a, b) {
+                return b.name.localeCompare(a.name);
+            });
+        }
+
+        if (value === "dateAsc") {
+            filteredEvents.sort(function(a, b) {
+                return new Date(a.date) - new Date(b.date);
+            });
+        }
+
+        if (value === "dateDesc") {
+            filteredEvents.sort(function(a, b) {
+                return new Date(b.date) - new Date(a.date);
+            });
+        }
+    }
+
+    function createPagination() {
+        pagination.innerHTML = "";
+
+        const totalPages = Math.ceil(
+            filteredEvents.length / eventsPerPage
+        );
+
+        for (let i = 1; i <= totalPages; i++) {
+            const button = document.createElement("button");
+
+            button.textContent = i;
+
+            if (i === currentPage) {
+                button.classList.add("active");
+            }
+
+            button.addEventListener("click", function() {
+                currentPage = i;
+                displayEvents();
+            });
+
+            pagination.appendChild(button);
+        }
+    }
+
+    searchInput.addEventListener("input", applyFilters);
+    categoryFilter.addEventListener("change", applyFilters);
+    sortSelect.addEventListener("change", applyFilters);
+});
+</script>
+</body>
+</html>
+
