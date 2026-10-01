@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+header {
+    width: 100%;
+    background: #1f3b8f;
+    color: white;
+    padding: 22px 20px;
+    flex-shrink: 0;
+}
+
+header h1 {
+    margin: 0 0 16px 0;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+header nav a:hover {
+    color: #dbeafe;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    margin: 45px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    flex: 0 0 auto;
+}
+
+.container h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #1f3b8f;
+}
+
+form {
+    width: 100%;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #1f3b8f;
+    box-shadow: 0 0 0 2px rgba(31, 59, 143, 0.08);
+}
+
+form button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background: #1f3b8f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+form button:hover {
+    background: #172f70;
+}
+
+form .error {
+    background: transparent;
+    border: none;
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding: 0;
+    min-height: 16px;
+    text-align: left;
+}
+
+.container > .success {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 13px;
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.container > .error {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 13px;
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    background: #1f3b8f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    header nav {
+        gap: 18px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 94%;
+        padding: 25px;
+        margin: 30px auto;
+    }
+
+    .container h2 {
+        font-size: 23px;
+    }
+
+    form input,
+    form select {
+        padding: 11px;
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 15px;
+    }
+
+    footer {
+        padding: 18px 15px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}
