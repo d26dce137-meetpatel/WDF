@@ -1,0 +1,1 @@
+<?php require 'db.php';require 'helpers.php';require_login();if(($_SESSION['user']['role']??'')==='admin'){header('Location: admin.php');exit;}header('Location: home.php');exit; ?>

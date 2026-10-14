@@ -1,0 +1,142 @@
+[
+    {
+        "name": "Technical Workshop",
+        "category": "Technical",
+        "date": "20 August 2026",
+        "time": "10:00 AM",
+        "venue": "Computer Lab"
+    },
+    {
+        "name": "Annual Sports Day",
+        "category": "Sports",
+        "date": "25 August 2026",
+        "time": "9:00 AM",
+        "venue": "College Ground"
+    },
+    {
+        "name": "Cultural Event",
+        "category": "Cultural",
+        "date": "30 August 2026",
+        "time": "5:00 PM",
+        "venue": "College Auditorium"
+    },
+    {
+        "name": "Project Exhibition",
+        "category": "Technical",
+        "date": "5 September 2026",
+        "time": "11:00 AM",
+        "venue": "Seminar Hall"
+    },
+    {
+        "name": "Coding Hackathon",
+        "category": "Technical",
+        "date": "10 September 2026",
+        "time": "9:30 AM",
+        "venue": "IT Lab 1"
+    },
+    {
+        "name": "Annual Debate",
+        "category": "Cultural",
+        "date": "15 September 2026",
+        "time": "2:00 PM",
+        "venue": "Conference Hall"
+    },
+    {
+        "name": "AI and Machine Learning Seminar",
+        "category": "Technical",
+        "date": "20 September 2026",
+        "time": "10:30 AM",
+        "venue": "Seminar Hall"
+    },
+    {
+        "name": "Photography Competition",
+        "category": "Cultural",
+        "date": "25 September 2026",
+        "time": "11:00 AM",
+        "venue": "College Campus"
+    },
+    {
+        "name": "Inter College Cricket Tournament",
+        "category": "Sports",
+        "date": "1 October 2026",
+        "time": "8:00 AM",
+        "venue": "College Ground"
+    },
+    {
+        "name": "Web Development Workshop",
+        "category": "Technical",
+        "date": "5 October 2026",
+        "time": "2:00 PM",
+        "venue": "IT Lab 2"
+    },
+    {
+        "name": "General Knowledge Quiz",
+        "category": "Cultural",
+        "date": "10 October 2026",
+        "time": "11:00 AM",
+        "venue": "Auditorium"
+    },
+    {
+        "name": "Robotics Challenge",
+        "category": "Technical",
+        "date": "15 October 2026",
+        "time": "9:30 AM",
+        "venue": "Mechanical Workshop"
+    },
+    {
+        "name": "Badminton Championship",
+        "category": "Sports",
+        "date": "20 October 2026",
+        "time": "4:00 PM",
+        "venue": "Indoor Sports Complex"
+    },
+    {
+        "name": "Annual Music Fest",
+        "category": "Cultural",
+        "date": "25 October 2026",
+        "time": "6:00 PM",
+        "venue": "College Ground"
+    },
+    {
+        "name": "Cloud Computing Bootcamp",
+        "category": "Technical",
+        "date": "30 October 2026",
+        "time": "10:00 AM",
+        "venue": "Computer Lab 3"
+    },
+    {
+        "name": "Cyber Security Seminar",
+        "category": "Technical",
+        "date": "2 November 2026",
+        "time": "11:00 AM",
+        "venue": "Seminar Hall"
+    },
+    {
+        "name": "Drama and Skit Competition",
+        "category": "Cultural",
+        "date": "8 November 2026",
+        "time": "4:30 PM",
+        "venue": "College Auditorium"
+    },
+    {
+        "name": "Marathon 2026",
+        "category": "Sports",
+        "date": "12 November 2026",
+        "time": "6:30 AM",
+        "venue": "City Main Road"
+    },
+    {
+        "name": "UI/UX Design Masterclass",
+        "category": "Technical",
+        "date": "18 November 2026",
+        "time": "2:00 PM",
+        "venue": "Design Lab"
+    },
+    {
+        "name": "Annual Fashion Show",
+        "category": "Cultural",
+        "date": "25 November 2026",
+        "time": "7:00 PM",
+        "venue": "Open Air Theater"
+    }
+]
